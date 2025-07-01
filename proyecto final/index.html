@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💖 Acceso Secreto 💖</title>
+  <style>
+    body {
+      background: linear-gradient(#ffdee9, #b5fffc);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .frase {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 30px;
+      max-width: 80%;
+    }
+    input {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      width: 200px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff8fab;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff5e8e;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Introduce la contraseña 🎁</h1>
+  <div class="frase">“<i>Las primeras veces, las primeras palabras… a veces esconden más de lo que imaginas</i>”</div>
+
+  <input type="password" id="password" placeholder="Contraseña">
+  <button onclick="checkPassword()">Acceder</button>
+  <div class="error" id="error"></div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("password").value;
+      const correctPassword = "2307"; // Cambia esto por la contraseña que tú elijas
+
+      if (password === correctPassword) {
+        window.location.href = "regalo.html";
+      } else {
+        document.getElementById("error").innerText = "Contraseña incorrecta ❌";
+      }
+    }
+  </script>
+
+</body>
+</html>
